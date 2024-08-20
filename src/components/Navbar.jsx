@@ -1,28 +1,36 @@
 import React, { useState } from "react";
-import { Link, useNavigate } from 'react-router-dom'; // Import Link for navigation and useNavigate for programmatic navigation
+import { Link, useNavigate } from 'react-router-dom';
 import './navbar.css';
 
-function Navbar() {
+function Navbar({ setLoading }) { // Accept setLoading as a prop
   const [active, setActive] = useState("nav__menu");
   const [toggleIcon, setToggleIcon] = useState("nav__toggler");
-  const [overlay, setOverlay] = useState("");  // New state for overlay
-  const navigate = useNavigate(); // Initialize useNavigate hook
+  const [overlay, setOverlay] = useState("");
+
+  const navigate = useNavigate();
 
   const navToggle = () => {
     if (active === "nav__menu") {
       setActive("nav__menu nav__active");
       setToggleIcon("nav__toggler toggle");
-      setOverlay("overlay-active");  // Show overlay when menu is active
+      setOverlay("overlay-active");
     } else {
       setActive("nav__menu");
       setToggleIcon("nav__toggler");
-      setOverlay("");  // Hide overlay when menu is inactive
+      setOverlay("");
     }
   };
 
   const handleLinkClick = (path) => {
-    navigate(path); // Navigate to the specified path
-    navToggle(); // Close the menu
+    if (path === '/shop') {
+      setLoading(true); // Start loading when the shop link is clicked
+      setTimeout(() => {
+        window.location.href = "https://shop.meleemusic.net";
+      }, 1000); // Redirect after a short delay
+    } else {
+      navigate(path);
+      navToggle();
+    }
   };
 
   return (
@@ -32,7 +40,7 @@ function Navbar() {
         <ul className={active}>
           <li className="nav__item"><Link to="/" className="nav__link" onClick={() => handleLinkClick('/')}>Home</Link></li>
           <li className="nav__item"><Link to="/artists" className="nav__link" onClick={() => handleLinkClick('/artists')}>Artists</Link></li>
-          <li className="nav__item"><Link to="/shop" className="nav__link" onClick={() => handleLinkClick('/shop')}>Shop</Link></li>
+          <li className="nav__item"><span className="nav__item" onClick={() => handleLinkClick('/shop')}>Shop</span></li> {/* Update to use a span */}
           <li className="nav__item"><Link to="/mixes" className="nav__link" onClick={() => handleLinkClick('/mixes')}>Mixes</Link></li>
           <li className="nav__item"><Link to="/about" className="nav__link" onClick={() => handleLinkClick('/about')}>About</Link></li>
         </ul>
@@ -42,7 +50,7 @@ function Navbar() {
           <div className="line3"></div>
         </div>
       </nav>
-      <div className={`overlay ${overlay}`} onClick={navToggle}></div> {/* Overlay element */}
+      <div className={`overlay ${overlay}`} onClick={navToggle}></div>
     </>
   );
 }

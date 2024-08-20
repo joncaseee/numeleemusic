@@ -31,7 +31,7 @@ const artists = [
     {
       alias: "T4C0",
       photoUrl: "https://i.imgur.com/c4WQjrp.png",
-      email: "chris@soundsbycipher.com",
+      email: "taco.meleemusic@gmail.com",
       socialLinks: [
         "https://facebook.com/T4C0",
         "https://instagram.com/T4C0",

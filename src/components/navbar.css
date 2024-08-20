@@ -44,6 +44,12 @@ a {
   position: relative;
   color: #000; /* Font color */
 }
+.nav__menu span {
+  padding: 0 1rem;
+  position: relative;
+  color: #000; /* Font color */
+  cursor: pointer;
+}
 
 .nav__menu a:not(:last-child)::after {
   content: '';
@@ -101,6 +107,13 @@ a {
     color: #fff; /* Ensure font color remains black on mobile */
     transform: translateX(120%);
   }
+  .nav__menu span {
+    border-left: 1px solid #fff;
+    padding: 15px;
+    color: #fff; /* Ensure font color remains black on mobile */
+    transform: translateX(120%);
+    cursor: pointer;
+  }
 
   .nav__menu a:hover {
     border-left: 1px solid #fff;
@@ -110,6 +123,17 @@ a {
     padding: 15px;
     font-size: larger;
     font-weight: bold;
+  }
+
+  .nav__menu span:hover {
+    border-left: 1px solid #fff;
+    transition: 0.1s ease-in;
+    transition: 0.1s ease-out;
+    color: #fff;
+    padding: 15px;
+    font-size: larger;
+    font-weight: bold;
+    cursor: pointer;
   }
 
   .overlay {
@@ -169,3 +193,5 @@ a {
 .nav__active ~ .nav {
   box-shadow: none;
 }
+
+

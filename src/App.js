@@ -8,7 +8,7 @@ import Footer from './components/Footer';
 import ArtistsList from './components/ArtistsList';
 import ArtistProfile from './components/ArtistProfile';
 import Home from "./pages/Home";
-import './App.css'; // Ensure you have this import if you're adding styles here
+import './App.css';
 
 function App() {
   const [loading, setLoading] = useState(false);
@@ -36,7 +36,7 @@ function App() {
           </div>
         ) : (
           <>
-            <Navbar />
+            <Navbar setLoading={setLoading} /> {/* Pass setLoading to Navbar */}
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/artists" element={<ArtistsList />} />
