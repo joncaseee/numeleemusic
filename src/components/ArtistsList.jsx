@@ -9,15 +9,19 @@ function ArtistsList() {
   const artists = getArtists();
 
   return (
-    <div className="artists-list">
-      {artists.map(artist => (
-        <div key={artist.alias} className="artist-item">
-          <Link to={`/pages/${artist.alias}`}>
-            <img src={artist.photoUrl} alt={artist.alias} />
-            <h2>{artist.alias}</h2>
-          </Link>
-        </div>
-      ))}
+    <div>
+      <h1 className='artistTitle'>Artists</h1>
+      <p>° ° ° ° °</p>
+      <div className="artists-list">
+        {artists.map(artist => (
+          <div key={artist.alias} className="artist-item">
+            <Link to={`/artists/${artist.alias}`}>
+              <img src={artist.photoUrl} alt={artist.alias} />
+              <h2>{artist.alias}</h2>
+            </Link>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }

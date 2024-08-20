@@ -4,6 +4,7 @@ const artists = [
     {
       alias: "CIPHER",
       photoUrl: "https://i.imgur.com/ua3zbm7.png",
+      email: "chris@soundsbycipher.com",
       socialLinks: [
         "https://facebook.com/soundsbycipher",
         "https://instagram.com/soundsbycipher",
@@ -30,6 +31,7 @@ const artists = [
     {
       alias: "T4C0",
       photoUrl: "https://i.imgur.com/c4WQjrp.png",
+      email: "chris@soundsbycipher.com",
       socialLinks: [
         "https://facebook.com/T4C0",
         "https://instagram.com/T4C0",
@@ -47,6 +49,7 @@ const artists = [
     {
       alias: "FEELINGS MUTUAL",
       photoUrl: "https://i.imgur.com/4tINgGf.png",
+      email: "chris@soundsbycipher.com",
       socialLinks: [
         "https://facebook.com/FEELINGSMUTUAL",
         "https://instagram.com/FEELINGSMUTUAL",
