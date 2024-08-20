@@ -1,0 +1,72 @@
+/* src/components/footer.css */
+.footer {
+    background-color: #000;
+    color: darkgray;
+    padding: 40px 0;
+    text-align: center;
+    border-top: 1px solid white; /* Correctly add a 1px white border */
+}
+  
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+  
+.footer-section {
+    flex: 1;
+    margin: 20px;
+    max-width: 300px;
+}
+  
+.footer-section h2 {
+    margin-bottom: 15px;
+    color: #fff;
+}
+  
+.footer-section p, .footer-section ul {
+    font-size: 0.9rem;
+    line-height: 1.8;
+}
+  
+.footer-section ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center; /* Center align the list items */
+}
+  
+.footer-section ul li {
+    margin: 5px 0;
+}
+  
+.footer-section ul li a {
+    color: darkgray;
+    text-decoration: none;
+}
+  
+.footer-section ul li a:hover {
+    color: #fff;
+}
+  
+.footer-section .social-links {
+    text-align: center; /* Ensure social links are centered */
+}
+  
+.footer-section .social-links a {
+    color: darkgray;
+    margin: 0 10px;
+    font-size: 1.5rem;
+}
+  
+.footer-section .social-links a:hover {
+    color: #fff;
+}
+  
+.footer-bottom {
+    padding: 10px 0;
+    border-top: 1px solid #333;
+    font-size: 0.8rem;
+}

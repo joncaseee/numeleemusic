@@ -1,0 +1,29 @@
+/* src/components/ArtistsList.css */
+
+.artists-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+  justify-content: center;
+}
+
+.artist-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.artist-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.artist-item h2 {
+  margin-top: 10px;
+  font-weight: normal; /* Ensure the font weight is not bold */
+  font-size: 1.5rem; /* Adjust this to the previous size you were using */
+}
