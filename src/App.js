@@ -8,6 +8,8 @@ import Footer from './components/Footer';
 import ArtistsList from './components/ArtistsList';
 import ArtistProfile from './components/ArtistProfile';
 import Home from "./pages/Home";
+import About from "./pages/About";
+import Mixes from "./pages/Mixes";
 import './App.css';
 
 function App() {
@@ -39,6 +41,8 @@ function App() {
             <Navbar setLoading={setLoading} /> {/* Pass setLoading to Navbar */}
             <Routes>
               <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/mixes" element={<Mixes />} />
               <Route path="/artists" element={<ArtistsList />} />
               <Route path="/artists/:alias" element={<ArtistProfile />} />
             </Routes>

@@ -42,7 +42,7 @@ function Navbar({ setLoading }) { // Accept setLoading as a prop
           <li className="nav__item"><Link to="/artists" className="nav__link" onClick={() => handleLinkClick('/artists')}>Artists</Link></li>
           <li className="nav__item"><span className="nav__item" onClick={() => handleLinkClick('/shop')}>Shop</span></li> {/* Update to use a span */}
           <li className="nav__item"><Link to="/mixes" className="nav__link" onClick={() => handleLinkClick('/mixes')}>Mixes</Link></li>
-          <li className="nav__item"><Link to="/about" className="nav__link" onClick={() => handleLinkClick('/about')}>About</Link></li>
+          <li className="nav__item"><Link to="/About" className="nav__link" onClick={() => handleLinkClick('/about')}>About</Link></li>
         </ul>
         <div onClick={navToggle} className={toggleIcon}>
           <div className="line1"></div>

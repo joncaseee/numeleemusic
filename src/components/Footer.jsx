@@ -8,15 +8,16 @@ const Footer = () => {
         <footer className="footer">
             <div className="footer-content">
                 <div className="footer-section">
-                    <h2>Quick Links</h2>
+                    <h3>Quick Links</h3>
                     <ul>
                         <li><a href="/">Home</a></li>
                         <li><a href="/artists">Artists</a></li>
                         <li><a href="/shop">Shop</a></li>
+                        <li><a href="/about">About</a></li>
                     </ul>
                 </div>
                 <div className="footer-section">
-                    <h2>Follow Us</h2>
+                    <h3>Follow Us</h3>
                     <ul className="social-links">
                         <li>
                             <a href="http://instagram.com/melee_music/" target="_blank" rel="noopener noreferrer">
@@ -26,7 +27,7 @@ const Footer = () => {
                     </ul>
                 </div>
                 <div className="footer-section about">
-          <h2>MELEE MUSIC</h2>
+          <h3>MELEE MUSIC</h3>
           <p>Your go-to platform for underground DJs and festival circuits. Join us and be part of the movement.</p>
         </div>
             </div>
