@@ -44,6 +44,7 @@ a {
   position: relative;
   color: #000; /* Font color */
 }
+
 .nav__menu span {
   padding: 0 1rem;
   position: relative;
@@ -82,11 +83,10 @@ a {
 
   .nav__menu {
     position: absolute;
-    top: 11vh; /* Adjusted to account for fixed navbar height */
+    top: 8vh; /* Adjusted to account for fixed navbar height */
     right: 3%;
     width: 26%;
     height: 45vh;
-    
     color: #fff;
     flex-direction: column;
     align-items: left;
@@ -101,39 +101,21 @@ a {
     content: none;
   }
 
-  .nav__menu a {
-    border-left: 1px solid #fff;
-    padding: 15px;
-    color: #fff; /* Ensure font color remains black on mobile */
-    transform: translateX(120%);
-  }
+  .nav__menu a,
   .nav__menu span {
     border-left: 1px solid #fff;
     padding: 15px;
     color: #fff; /* Ensure font color remains black on mobile */
     transform: translateX(120%);
-    cursor: pointer;
   }
 
-  .nav__menu a:hover {
-    border-left: 1px solid #fff;
-    transition: 0.1s ease-in;
-    transition: 0.1s ease-out;
-    color: #fff;
-    padding: 15px;
-    font-size: larger;
-    font-weight: bold;
-  }
-
+  .nav__menu a:hover,
   .nav__menu span:hover {
     border-left: 1px solid #fff;
     transition: 0.1s ease-in;
-    transition: 0.1s ease-out;
     color: #fff;
-    padding: 15px;
     font-size: larger;
     font-weight: bold;
-    cursor: pointer;
   }
 
   .overlay {
@@ -172,14 +154,12 @@ a {
   transform: rotate(45deg) translate(-4px, -5px);
 }
 
-
-
 .nav {
   display: flex;
   align-items: center;
   justify-content: space-around;
   height: 8vh; /* Fixed height */
-  padding-bottom: 5px;
+  padding: 0; /* Remove padding to prevent resizing */
   background: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Drop shadow for separation */
   position: fixed; /* Fixed positioning */
@@ -193,5 +173,3 @@ a {
 .nav__active ~ .nav {
   box-shadow: none;
 }
-
-

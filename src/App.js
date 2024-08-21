@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import ScaleLoader from "react-spinners/ScaleLoader";
 import Navbar from "./components/Navbar";
+import ScrollToTop from './components/ScrollToTop';
 import Footer from './components/Footer';
 import ArtistsList from './components/ArtistsList';
 import ArtistProfile from './components/ArtistProfile';
@@ -24,6 +25,7 @@ function App() {
 
   return (
     <Router>
+      <ScrollToTop />  {/* Add this line */}
       <div>
         {loading ? (
           <div className="loader-container">
@@ -40,6 +42,7 @@ function App() {
           <>
             <Navbar setLoading={setLoading} /> {/* Pass setLoading to Navbar */}
             <Routes>
+            
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
               <Route path="/mixes" element={<Mixes />} />
