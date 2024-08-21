@@ -1,5 +1,3 @@
-/* App.js */
-
 import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import ScaleLoader from "react-spinners/ScaleLoader";
@@ -17,15 +15,28 @@ function App() {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
+    // Initial loading state when the app mounts
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
     }, 500);
+
+    // Event listener for when the user navigates back to the app
+    const handlePopState = () => {
+      setLoading(false); // Reset the loading state
+    };
+
+    window.addEventListener('popstate', handlePopState);
+
+    // Cleanup the event listener on component unmount
+    return () => {
+      window.removeEventListener('popstate', handlePopState);
+    };
   }, []);
 
   return (
     <Router>
-      <ScrollToTop />  {/* Add this line */}
+      <ScrollToTop />
       <div>
         {loading ? (
           <div className="loader-container">
@@ -40,9 +51,8 @@ function App() {
           </div>
         ) : (
           <>
-            <Navbar setLoading={setLoading} /> {/* Pass setLoading to Navbar */}
+            <Navbar setLoading={setLoading} />
             <Routes>
-            
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
               <Route path="/mixes" element={<Mixes />} />
