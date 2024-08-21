@@ -126,7 +126,7 @@ a {
     height: calc(100% - 8vh); /* Cover the rest of the page */
     background: rgba(0, 0, 0, 0); /* Start with no opacity */
     backdrop-filter: blur(0px);
-    transition: background 0.8s ease-in-out;
+    transition: background 0.5s ease-in-out;
     pointer-events: none; /* Prevent clicking through the overlay */
     z-index: 5; /* Ensure it's below the navbar */
   }
@@ -135,7 +135,7 @@ a {
     background: rgba(0, 0, 0, 0.65); /* Semi-transparent black */
     backdrop-filter: blur(10px);
     pointer-events: auto; /* Allow interaction with the overlay */
-    transition: 0.5s ease-in;
+    transition: 0.5s ease-in-out;
   }
 }
 
