@@ -161,7 +161,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  height: 8vh; /* Fixed height */
+  height: 7rem; /* Fixed height */
   padding: 0; /* Remove padding to prevent resizing */
   background: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Drop shadow for separation */

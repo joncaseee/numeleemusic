@@ -9,26 +9,27 @@ import ArtistProfile from './components/ArtistProfile';
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Mixes from "./pages/Mixes";
+import Tickets from "./pages/Tickets";
+import Terms from "./pages/Terms";
+import Rules from "./pages/Rules";
+import Locations from "./pages/Locations"; // Import the new Locations component
 import './App.css';
 
 function App() {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    // Initial loading state when the app mounts
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
     }, 500);
 
-    // Event listener for when the user navigates back to the app
     const handlePopState = () => {
-      setLoading(false); // Reset the loading state
+      setLoading(false);
     };
 
     window.addEventListener('popstate', handlePopState);
 
-    // Cleanup the event listener on component unmount
     return () => {
       window.removeEventListener('popstate', handlePopState);
     };
@@ -56,8 +57,12 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
               <Route path="/mixes" element={<Mixes />} />
+              <Route path="/tickets" element={<Tickets />} />
               <Route path="/artists" element={<ArtistsList />} />
               <Route path="/artists/:alias" element={<ArtistProfile />} />
+              <Route path="/terms" element={<Terms />} />
+              <Route path="/rules" element={<Rules />} />
+              <Route path="/locations" element={<Locations />} /> {/* Add this line */}
             </Routes>
             <Footer />
           </>

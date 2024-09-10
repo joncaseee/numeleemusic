@@ -1,0 +1,74 @@
+.event-desc-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: white;
+    text-align: left;
+  }
+  
+  .event-desc-invite {
+    font-size: .8em;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  .event-desc-lineup {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  
+  .event-desc-details {
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  .event-desc-details p {
+    margin: 5px 0;
+  }
+  
+  .event-desc-venue {
+    margin-bottom: 20px;
+  }
+  
+  .event-desc-expect {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+  
+  .event-desc-list {
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 20px;
+  }
+  
+  .event-desc-list li {
+    margin-bottom: 5px;
+  }
+  
+  .event-desc-reentry, .event-desc-contact, .event-desc-outro {
+    margin-bottom: 15px;
+  }
+  
+  .event-desc-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+  
+  .event-desc-button-icon {
+    margin-right: 10px;
+  }
+  
+  a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  

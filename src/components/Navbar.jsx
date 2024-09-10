@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link, useNavigate } from 'react-router-dom';
 import './navbar.css';
 
-function Navbar({ setLoading }) { // Accept setLoading as a prop
+function Navbar({ setLoading }) {
   const [active, setActive] = useState("nav__menu");
   const [toggleIcon, setToggleIcon] = useState("nav__toggler");
   const [overlay, setOverlay] = useState("");
@@ -23,10 +23,10 @@ function Navbar({ setLoading }) { // Accept setLoading as a prop
 
   const handleLinkClick = (path) => {
     if (path === '/shop') {
-      setLoading(true); // Start loading when the shop link is clicked
+      setLoading(true);
       setTimeout(() => {
         window.location.href = "https://shop.meleemusic.net";
-      }, 1000); // Redirect after a short delay
+      }, 1000);
     } else {
       navigate(path);
       navToggle();
@@ -40,8 +40,9 @@ function Navbar({ setLoading }) { // Accept setLoading as a prop
         <ul className={active}>
           <li className="nav__item"><Link to="/" className="nav__link" onClick={() => handleLinkClick('/')}>Home</Link></li>
           <li className="nav__item"><Link to="/artists" className="nav__link" onClick={() => handleLinkClick('/artists')}>Artists</Link></li>
-          <li className="nav__item"><span className="nav__item" onClick={() => handleLinkClick('/shop')}>Shop</span></li> {/* Update to use a span */}
+          <li className="nav__item"><span className="nav__item" onClick={() => handleLinkClick('/shop')}>Shop</span></li>
           <li className="nav__item"><Link to="/mixes" className="nav__link" onClick={() => handleLinkClick('/mixes')}>Mixes</Link></li>
+          <li className="nav__item"><Link to="/tickets" className="nav__link" onClick={() => handleLinkClick('/tickets')}>Tickets</Link></li>
           <li className="nav__item"><Link to="/About" className="nav__link" onClick={() => handleLinkClick('/about')}>About</Link></li>
         </ul>
         <div onClick={navToggle} className={toggleIcon}>
